@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dip"
+    android:gravity="clip_horizontal">
+
+    <EditText
+        android:id="@+id/info_edit"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:scrollHorizontally="true"
+        android:autoText="false"
+        android:capitalize="none"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:singleLine="true"
+        android:hint="description"
+        />
+    <TextView
+        android:gravity="left"
+        android:id="@+id/myedit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bug Severity:"/>
+    <RadioGroup android:id="@+id/radioGroup_edit" android:layout_height="wrap_content" android:layout_width="wrap_content" android:orientation="horizontal">
+        <RadioButton android:checked="true" android:id="@+id/btn_minor" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="minor" />
+        <!--<RadioButton android:id="@+id/btn_major" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="一般" />-->
+        <RadioButton android:id="@+id/btn_critical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="critical" />
+        <RadioButton android:id="@+id/btn_blocker" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="blocker" />
+    </RadioGroup>
+    <TextView
+        android:gravity="left"
+        android:id="@+id/myedit_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bug Type:"/>
+    <RadioGroup android:id="@+id/radioGroup_edititem" android:layout_height="wrap_content" android:layout_width="wrap_content" android:orientation="horizontal">
+        <RadioButton android:checked="true" android:id="@+id/btn_method" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="method" android:textSize="10dp"/>
+        <RadioButton android:id="@+id/btn_picui" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="UI" android:textSize="10dp"/>
+        <RadioButton android:id="@+id/btn_picsafe" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="safe" android:textSize="10dp"/>
+        <RadioButton android:id="@+id/btn_picperform" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="perform" android:textSize="10dp"/>
+    </RadioGroup>
+</LinearLayout>
