@@ -1,4 +1,4 @@
-###
+### Abstract
 &emsp; Crowdsourced testing is an emerging trend in the mobile application testing paradigm. Along with conducting large-scale user-oriented testing scenarios in diverse mobile devices, 
 crowdsourced testing also brings the problem of crowdworkers with different testing skills, which significantly slows down the quality of crowdsourced testing. 
 Despite massive approaches to assisting crowdsourced testing, there is still a lack of assistance for crowdworkers. 
