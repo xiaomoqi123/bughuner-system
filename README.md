@@ -24,3 +24,5 @@ Yunyue-master: the source code combined Yunyue and our tool;
 Yunyue: the source code of Yunyue is from https://github.com/youlookwhat/CloudReader.git
 <br>
 sql: there are the node and edge information and a part of test reports submitted by crowdworkers
+<br>
+usage: as an example of Yunyue, this file fold includes the operation process of test tasks with abnormal and uncovered windows transitions
