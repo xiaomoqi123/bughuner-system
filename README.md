@@ -13,7 +13,7 @@ Moreover, the results from a user study indicate that our approach is useful to 
 
 
 ###
-This github shows the information about the Yueyue app
+This github shows the information about the Yunyue app
 <br>
 Bughunter: the server of our tool;
 <br>
