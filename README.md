@@ -10,15 +10,17 @@ That is, the existing approaches lack a way to guide crowdworkers to test the Ap
 ### Detailed information
 As an example of Yunyue app, This repository includes the following information
 <br>
-Bughunter: the server of our tool;
+Bughunter: the server of our tool.
 <br>
-Yunyue: the apk embedded with our tool;
+Yunyue: the apk embedded with our tool.
 <br>
-Yunyue-master: the source code combined Yunyue and our tool, the source code of Yunyue is from https://github.com/youlookwhat/CloudReader.git;
+Yunyue-master: the source code combined Yunyue and our tool, the source code of Yunyue is from https://github.com/youlookwhat/CloudReader.git.
 <br>
-sql: there are the node and edge information, and a part of test reports submitted by crowdworkers about Yunyue
+sql: there are the node and edge information, and a part of test reports submitted by crowdworkers about Yunyue.
 <br>
-usage: as an example of Yunyue, this file fold includes the operation process of test tasks with abnormal and uncovered windows transitions
+usage: as an example of Yunyue, this file fold includes the operation process of test tasks with abnormal and uncovered windows transitions.
 <br>
-results: the experimental results related to all research questions 
+crowdworker distribution: as for all AUTs, there is the crowdworker distribution information.
+<br>
+results: the experimental results related to all research questions.
 
