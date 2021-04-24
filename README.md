@@ -8,7 +8,7 @@ That is, the existing approaches lack a way to guide crowdworkers to test the Ap
 
 
 ### Detailed information
-As an example of Yunyue app, This repository includes the following information
+As an example of Yunyue app, this repository includes the following information.
 
 + Bughunter: the server of our tool.
 
