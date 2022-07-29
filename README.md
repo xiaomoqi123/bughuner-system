@@ -1,26 +1,45 @@
-### Abstract
-&emsp; Crowdsourced testing is an emerging trend in the mobile application testing paradigm. Along with conducting large-scale user-oriented testing scenarios in diverse mobile devices, 
-crowdsourced testing also brings the problem of crowdworkers with different testing skills, which significantly slows down the quality of crowdsourced testing. 
-Despite massive approaches to assisting crowdsourced testing, there is still a lack of assistance for crowdworkers. 
-That is, the existing approaches lack a way to guide crowdworkers to test the App Under Test (AUT) during crowdsourced testing.
+## Abstract
+
+&emsp; Crowdsourced testing is an emerging trend in mobile application testing. The openness of crowdsourced testing provides a promising way to conduct large-scale and user-oriented testing scenarios on various mobile devices, while it also brings a problem, i.e., crowdworkers with different levels of testing skills severely threaten crowdsourced testing quality. Many approaches (e.g., incentive mechanism, crowdworker/test task recommendation, and test report optimization) are proposed to improve crowdsourced testing. However, these approaches do not fundamentally improve the ability of crowdworkers. In essence, the low-quality crowdsourced testing is caused by crowdworkers who are unfamiliar with the App Under Test (AUT) and do not know which part of the AUT should be tested. 
 <br>
-&emsp; This paper proposes a test assistance mechanism to assist crowdsourced testing. Such a test assistance mechanism leverages Android automated testing (i.e., dynamic analysis and static analysis) to assist crowdworkers in getting familiar with and understanding the AUT, and relies on the domain knowledge of crowdworkers to discover bugs of the AUT during crowdsourced testing. Our approach combines dynamic and static analysis to construct an Annotated Window Transition Graph (AWTG) model of the AUT. Based on the AWTG model, our approach automatically extracts test tasks for crowdworkers, recommends these test tasks to crowdworkers, and further guides crowdworkers to complete these test tasks. We conduct evaluations on ten real-world Android apps, and the experimental results demonstrate that our approach can effectively and efficiently assist crowdworkers in testing the AUT during crowdsourced testing. Moreover, the results from a user study indicate that our approach is useful to assist crowdsourced testing.
+&emsp;To address this problem, we propose a testing assistance approach, which leverages Android automated testing (i.e., dynamic and static analysis) to improve crowdsourced testing. Our approach constructs an Annotated Window Transition Graph (AWTG) model for the AUT by merging dynamic and static analysis results. To assist crowdworkers in testing the AUT, our approach relies on the AWTG model to implement a testing assistance pipeline that provides the test task extraction, test task recommendation, and test task guidance for crowdworkers during crowdsourced testing.The experimental results on real-world AUTs quantitatively demonstrate that our approach can effectively and efficiently assist crowdsourced testing. Besides, the qualitative results from a user study confirm the usefulness of our approach.
+
+## Setup
+The following is required to set up our tool:
++ Java version 1.8+
+
++ Android API level 19+
+
++ at least 1GB hard driver and 8GB memory
+
++ Window operation: Mac OS 10+ or Ububntu 18.04 64-bit or Windows 10 64-bit
+
+## Usage step
+Our tool consists of the sever and client ends. The sever end is responsible for constructing AWTG model, test task extraction, recommendation, and guidance. The client end is responsible for showing the assistance information to crowdworkers.
+
++ Step 1: Using dynamic and static analysis tool to analysis the AUT. The dynamic analysis tool is from [MoocTest](http://www.mooctest.net). If it is required to dynamically analyze the AUT, please contact 1683245057@qq.com. The static analysis tool is from [GATOR](http://web.cse.ohio-state.edu/presto/software/gator/). 
+
++ Step 2: Taking dynamic and static analysis results as input to Bughunter-sever.
+
++ Step 3: Embedding the cilent ends to the source code of AUT (CloudReader-client). 
+
++ Step 4: Recompiling CloudReader-client as a new APK and assigning it to crowdworkers.
+
++ Step 5: Crowdworkers test the recompiled AUT and submit test reports to the server end.
 
 
-### Detailed information
-As an example of Yunyue app, this repository includes the following information.
+
+## Example
+As an example of CloudReader app, this repository includes the following information.
 
 + Bughunter: the server of our tool.
 
-+ Yunyue: the apk embedded with our tool.
++ CloudReader-client: the apk embedded with our tool. The source code of CloudReader is from https://github.com/youlookwhat/CloudReader.git.
 
-+ Yunyue-master: the source code combined Yunyue and our tool, the source code of Yunyue is from https://github.com/youlookwhat/CloudReader.git.
++ usage: the assistance information for crowdworkers in CloudReader-client. It mainly contains the operation process of test tasks with abnormal and uncovered windows transitions.
 
-+ sql: there are the node and edge information, and a part of test reports submitted by crowdworkers about Yunyue.
+## Other information
 
-+ usage: as an example of Yunyue, this file fold includes the operation process of test tasks with abnormal and uncovered windows transitions.
++ crowdworker_distribution.xlsx: the crowdworker distribution information for all all AUTs.
 
-+ crowdworker distribution: as for all AUTs, there is the crowdworker distribution information.
-
-+ results: the experimental results related to all research questions.
-
++ user_study_result.xlsx: the feedback of crowdworkers via the questionnaire.
