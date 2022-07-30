@@ -21,9 +21,16 @@ Our tool consists of the sever and client ends. The sever end is responsible for
 
 + Step 2: Taking dynamic and static analysis results as input to Bughunter-sever.
 
-+ Step 3: Embedding the cilent ends to the source code of AUT (CloudReader-client). 
++ Step 3: In the source code of AUT, adding the permissions to AndroidManifest.xml and adding the configuration statement to each activity class and each base class
+Permissions:
+![image](https://user-images.githubusercontent.com/18481003/181909034-0fc36a1b-e270-49c6-a7ea-bbd9f52f76e7.png)
+Configuration statement
+![image](https://user-images.githubusercontent.com/18481003/181909072-66b0f5d8-8e1a-4cb9-81fc-124b71823a53.png)
 
-+ Step 4: Recompiling CloudReader-client as a new APK and assigning it to crowdworkers.
+
++ Step 3: In the source code of AUT, adding the permissions to AndroidManifest.xml and adding the configuration statement to each activity class and each base class
+
++ Step 4: Recompiling AUT as a new APK and assigning it to crowdworkers.
 
 + Step 5: Crowdworkers test the recompiled AUT and submit test reports to the server end.
 
