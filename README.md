@@ -15,35 +15,37 @@ The following is required to set up our tool:
 + Window operation: Mac OS 10+ or Ububntu 18.04 64-bit or Windows 10 64-bit
 
 ## Usage step
-Our tool consists of the sever and client ends. The sever end is responsible for constructing AWTG model, test task extraction, recommendation, and guidance. The client end is responsible for showing the assistance information to crowdworkers.
 
 + Step 1: Using dynamic and static analysis tool to analysis the AUT. The dynamic analysis tool is from [MoocTest](http://www.mooctest.net). If it is required to dynamically analyze the AUT, please contact 1683245057@qq.com. The static analysis tool is from [GATOR](http://web.cse.ohio-state.edu/presto/software/gator/). 
 
 + Step 2: Taking dynamic and static analysis results as input to Bughunter-sever.
 
-+ Step 3: In the source code of AUT, adding the permissions to AndroidManifest.xml and adding the configuration statement to each activity class and each base class
-Permissions:
-![image](https://user-images.githubusercontent.com/18481003/181909034-0fc36a1b-e270-49c6-a7ea-bbd9f52f76e7.png)
-Configuration statement
-![image](https://user-images.githubusercontent.com/18481003/181909072-66b0f5d8-8e1a-4cb9-81fc-124b71823a53.png)
++ Step 3: In the source code of AUT, adding the permissions to AndroidManifest.xml and adding the configuration statement to each activity class and each base class.
+
+&emsp; &emsp; Permissions:
+
+&emsp; &emsp; <img width="562" alt="image" src="https://user-images.githubusercontent.com/18481003/181909465-daad8017-3077-41a7-a253-9ce9c83b5d59.png">
 
 
-+ Step 3: In the source code of AUT, adding the permissions to AndroidManifest.xml and adding the configuration statement to each activity class and each base class
+&emsp; &emsp; Configuration statement:
+
+&emsp; &emsp; <img width="700" alt="image" src="https://user-images.githubusercontent.com/18481003/181909712-874f0956-b6e3-4f3a-84ea-b645813ab582.png"> 
+
 
 + Step 4: Recompiling AUT as a new APK and assigning it to crowdworkers.
 
-+ Step 5: Crowdworkers test the recompiled AUT and submit test reports to the server end.
++ Step 5: Crowdworkers test the recompiled AUT and submit test reports to Bughunter-sever.
 
 
 
 ## Example
 As an example of CloudReader app, this repository includes the following information.
 
-+ Bughunter: the server of our tool.
++ Bughunter: the server end.
 
-+ CloudReader-client: the apk embedded with our tool. The source code of CloudReader is from https://github.com/youlookwhat/CloudReader.git.
++ CloudReader-client: the client end, which is installed on the Android device. The source code of CloudReader is from https://github.com/youlookwhat/CloudReader.git.
 
-+ usage: the assistance information for crowdworkers in CloudReader-client. It mainly contains the operation process of test tasks with abnormal and uncovered windows transitions.
++ usage: the assistance information for crowdworkers in CloudReader-client. It mainly contains the operation process of test tasks with abnormal and uncovered window transitions.
 
 ## Other information
 
