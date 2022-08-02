@@ -15,6 +15,7 @@ The following is required to set up our tool:
 + Window operation: Mac OS 10+ or Ububntu 18.04 64-bit or Windows 10 64-bit
 
 ## Usage step
+Our approach contains the server and client ends. The server end is designed for AWTG model construction, test task extraction, test task recommenfation,  test task guidance, test report collection, and etc. The cilent end is designed to show the test assistance information for crowdworkers. Steps 1 and 2 are for the server end. Steps 3 and 4 for the client end.
 
 + Step 1: Using dynamic and static analysis tool to analysis the AUT. The dynamic analysis tool is from [MoocTest](http://www.mooctest.net). If it is required to dynamically analyze the AUT, please contact 1683245057@qq.com. The static analysis tool is from [GATOR](http://web.cse.ohio-state.edu/presto/software/gator/). 
 
@@ -35,7 +36,6 @@ The following is required to set up our tool:
 + Step 4: Recompiling AUT as a new APK and assigning it to crowdworkers.
 
 + Step 5: Crowdworkers test the recompiled AUT and submit test reports to Bughunter-sever.
-
 
 
 ## Example
